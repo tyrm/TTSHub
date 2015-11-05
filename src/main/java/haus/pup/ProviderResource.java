@@ -30,7 +30,14 @@ public class ProviderResource {
   @GET
   @Produces({MediaType.APPLICATION_JSON,MediaType.APPLICATION_XML})
   @Path("{providerId}/voices")
-  public List<Voice> getPhrase(@PathParam("providerId") String providerId) {
+  public List<Voice> getVoices(@PathParam("providerId") String providerId) {
     return providerRepo.getVoices(providerId);
+  }
+
+  @GET
+  @Produces({MediaType.APPLICATION_JSON,MediaType.APPLICATION_XML})
+  @Path("{providerId}/voices/{lang}")
+  public List<Voice> getVoicesByLang(@PathParam("providerId") String providerId, @PathParam("lang") String lang) {
+    return providerRepo.getVoicesByLang(providerId, lang);
   }
 }
