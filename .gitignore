@@ -17,6 +17,5 @@ buildNumber.properties
 
 # application files
 *.db
-tts/
 IvonaCredentials.properties
 
