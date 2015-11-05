@@ -8,5 +8,7 @@ import java.util.Map;
 
 public interface ProviderRepository {
   public List<Voice> getVoices(String provider);
+  public List<Voice> getVoicesByLang(String provider, String lang);
   public List<Provider> getProviders();
+
 }
