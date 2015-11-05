@@ -19,6 +19,10 @@ public class ProviderRepositoryStub implements ProviderRepository {
     return providers.get(provider).getVoices();
   }
 
+  public List<Voice> getVoicesByLang(String provider, String lang) {
+    return providers.get(provider).getVoices();
+  }
+
   public List<Provider> getProviders() {
     List<Provider> providers = new ArrayList<Provider>();
 
@@ -26,8 +30,7 @@ public class ProviderRepositoryStub implements ProviderRepository {
 
     ivona.setId("ivona");
 
-    providers.add(new Provider("ivona"));
-
+    providers.add(ivona);
 
     return providers;
   }
